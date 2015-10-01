@@ -9,90 +9,90 @@
 //import UIKit
 //
 //class DrawView: UIView {
-//    
+//
 //    var lines = [Line]()
-//    
-//    
+//
+//
 //    override func drawRect(rect: CGRect) {
 //        // Drawing code
-//        
+//
 //        let context = UIGraphicsGetCurrentContext()
-//        
+//
 //        UIColor.magentaColor().set()
-//        
+//
 //        for line in lines {
-//            
+//
 //            if let start = line.start, let end = line.end {
-//                
+//
 //                if let fillColor = line.fillColor {
-//                    
+//
 //                    fillColor.set()
-//                    
-//                    
+//
+//
 //                }
-//                
+//
 //                if let strokeColor = line.strokeColor {
-//                    
+//
 //                    strokeColor.set()
-//                    
+//
 //                    CGContextSetLineWidth(context, line.strokeWidth)
-//                    
+//
 //                    CGContextSetLineCap(context, .Round)
 //                    CGContextSetLineJoin(context, .Round)
-//                    
+//
 //                    CGContextMoveToPoint(context, start.x, start.y)
-//                    
+//
 ////                    if line is Scribble {
-////                        
-////                        
-////                    
+////
+////
+////
 ////                    }
-//                    
+//
 //                    if let scribble = line as? Scribble {
-//                        
+//
 //                        CGContextAddLines(context, scribble.points, scribble.points.count)
 //
 //
 //                    }
-//                    
+//
 //                    CGContextAddLineToPoint(context, end.x, end.y)
-//                        
-//                
-//                    
+//
+//
+//
 //                    CGContextStrokePath(context)
-//                    
+//
 //                }
-//                
+//
 //            }
-//            
+//
 //        }
-//        
+//
 //    }
-//    
+//
 //}
 //
 //class Line {
-//    
+//
 //    var start: CGPoint?
 //    var end: CGPoint?
-//    
+//
 //    var strokeColor: UIColor?
 //    var fillColor: UIColor?
-//    
+//
 //    var strokeWidth: CGFloat = 0
-//    
+//
 //}
 //
 //class Scribble: Line {
-//    
+//
 //    var points = [CGPoint]() {
-//        
+//
 //        didSet {
-//            
+//
 //            start = points.first
-//            
+//
 //            end = points.last
-//            
+//
 //        }
 //    }
 //}
@@ -193,6 +193,19 @@ class DrawView: UIView {
                             
                             CGContextFillRect(context, rect)
                             
+                        case . Diamond :
+                            
+                            let top = CGPoint(x: width / 2 + start.x, y: start.y)
+                            let right = CGPoint(x: end.x , y: height / 2 + start.y)
+                            let left = CGPoint(x: start.x, y: height / 2 + start.y)
+                            let bottom = CGPoint(x: width / 2 + start.x, y: end.y)
+                            
+                            CGContextMoveToPoint(context, top.x, top.y)
+                            CGContextAddLineToPoint(context, right.x, right.y)
+                            CGContextAddLineToPoint(context, bottom.x, bottom.y)
+                            CGContextAddLineToPoint(context, left.x, left.y)
+                            CGContextAddLineToPoint(context, top.x, top.y) // closes diamond
+                            CGContextFillPath(context)
                             
                         }
                     }
@@ -211,8 +224,8 @@ class DrawView: UIView {
                     
                     //creates start point for line
                     CGContextMoveToPoint(context, start.x, start.y)
-                    //                    //creates end poing for the line
-                    //                    CGContextAddLineToPoint(context, end.x, end.y)
+                    //          //creates end poing for the line
+                    //CGContextAddLineToPoint(context, end.x, end.y)
                     //                    // setting up to draw
                     //                    CGContextStrokePath(context)
                     //
@@ -333,7 +346,7 @@ class Scribble: Line {
 enum ShapeType {
     
     // creates the allowable shape types
-    case Rectangle, Circle, Triangle
+    case Rectangle, Circle, Triangle, Diamond
     
 }
 // creates a new class for the Shape - "Line" is subclass
