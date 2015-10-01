@@ -53,15 +53,23 @@ class ViewController: UIViewController {
             //            newLine.strokeWidth = 10
             //
             //            (view as? DrawView)?.lines.append(newLine)
-            let newScribble = Scribble()
+//            let newScribble = Scribble()
+//            
+//            newScribble.points.append(touch.locationInView(view))
+//            
+//            newScribble.strokeColor = UIColor.blackColor()
+//            newScribble.strokeWidth = 10
+//            
+//            (view as? DrawView)?.lines.append(newScribble)
+
+            // initializing shape
+            let shape = Shape(type: .Circle)
+            // sets start location of the shape (top left corner of the shape)
+            shape.start = touch.locationInView(view)
+            // sets color of the shape
+            shape.fillColor = UIColor.purpleColor()
             
-            newScribble.points.append(touch.locationInView(view))
-            
-            newScribble.strokeColor = UIColor.blackColor()
-            newScribble.strokeWidth = 10
-            
-            (view as? DrawView)?.lines.append(newScribble)
-            
+            (view as? DrawView)?.lines.append(shape)
             view.setNeedsDisplay()
             
         }
@@ -78,12 +86,19 @@ class ViewController: UIViewController {
             //                view.setNeedsDisplay()
             //
             //            }
-            if let currentScribble = (view as? DrawView)?.lines.last as? Scribble {
+//            if let currentScribble = (view as? DrawView)?.lines.last as? Scribble {
+//                
+//                currentScribble.points.append(touch.locationInView(view))
+//                
+//                view.setNeedsDisplay()
+            
+            if let currentShape = (view as? DrawView)?.lines.last {
                 
-                currentScribble.points.append(touch.locationInView(view))
+                currentShape.end = touch.locationInView(view)
                 
                 view.setNeedsDisplay()
                 
+            
             }
         }
     }
