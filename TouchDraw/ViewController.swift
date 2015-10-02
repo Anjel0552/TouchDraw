@@ -15,18 +15,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var controlPanelView: UIView!
     
+    @IBOutlet weak var toggleButton: ToggleButton!
     @IBAction func toggleControlPanel(sender: AnyObject) {
         
-        self.controlPanelTop.constant = self.controlPanelView.frame.origin.y == 0 ? -200 : 0
+        controlPanelTop.constant = self.controlPanelView.frame.origin.y == 0 ? -200 : 0
         view.setNeedsUpdateConstraints()
+        
+        let degrees: CGFloat = controlPanelView.frame.origin.y == 0 ? 0 : 180
         
         UIView.animateWithDuration(0.4) { () -> Void in
             
             self.view.layoutIfNeeded()
             
+            let degreesToRadians: (CGFloat) -> CGFloat = {
+                
+                return $0 / 180.0 * CGFloat(M_PI)
+                
+            }
+            
+            let t = CGAffineTransformMakeRotation(degreesToRadians(degrees));
+            self.toggleButton.transform = t
+
             
             
-            
+        
             
             
         }
@@ -37,9 +49,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        controlPanelTop.constant = -200
         
-        
-        
+                
     }
     
     var chosenTool: Int = 0
@@ -58,9 +70,9 @@ class ViewController: UIViewController {
     
     @IBAction func undo(sender: AnyObject) {
         
-     if (view as? DrawView)?.lines.count > 0 {
+        if (view as? DrawView)?.lines.count > 0 {
             
-        (view as? DrawView)?.lines.removeLast()
+            (view as? DrawView)?.lines.removeLast()
         }
         view.setNeedsDisplay()
         
@@ -172,19 +184,19 @@ class ViewController: UIViewController {
                 view.setNeedsDisplay()
                 //////Scriblle
                 
-            } else if let 
-            
-            currentLine = (view as? DrawView)?.lines.last {
-            
-            currentLine.end = touch.locationInView(view)
-            
-            view.setNeedsDisplay()
-            
-            
-            
-                        }
-                }
+            } else if let
+                
+                currentLine = (view as? DrawView)?.lines.last {
+                    
+                    currentLine.end = touch.locationInView(view)
+                    
+                    view.setNeedsDisplay()
+                    
+                    
+                    
+            }
         }
+    }
 }
 
 

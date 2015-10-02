@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3742E7AE1BBF065600E65FDB /* TouchSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742E7AD1BBF065600E65FDB /* TouchSlider.swift */; settings = {ASSET_TAGS = (); }; };
 		37ACFBC81BBC18E1005CFB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ACFBC71BBC18E1005CFB07 /* AppDelegate.swift */; };
 		37ACFBCA1BBC18E1005CFB07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ACFBC91BBC18E1005CFB07 /* ViewController.swift */; };
 		37ACFBCD1BBC18E1005CFB07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ACFBCB1BBC18E1005CFB07 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3742E7AD1BBF065600E65FDB /* TouchSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchSlider.swift; sourceTree = "<group>"; };
 		37ACFBC41BBC18E1005CFB07 /* TouchDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37ACFBC71BBC18E1005CFB07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37ACFBC91BBC18E1005CFB07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		37ACFBC61BBC18E1005CFB07 /* TouchDraw */ = {
 			isa = PBXGroup;
 			children = (
+				3742E7AD1BBF065600E65FDB /* TouchSlider.swift */,
 				37ACFBC71BBC18E1005CFB07 /* AppDelegate.swift */,
 				37ACFBD91BBC19A1005CFB07 /* DrawView.swift */,
 				37ACFBC91BBC18E1005CFB07 /* ViewController.swift */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37ACFBCA1BBC18E1005CFB07 /* ViewController.swift in Sources */,
+				3742E7AE1BBF065600E65FDB /* TouchSlider.swift in Sources */,
 				37ACFBC81BBC18E1005CFB07 /* AppDelegate.swift in Sources */,
 				37ACFBDA1BBC19A1005CFB07 /* DrawView.swift in Sources */,
 				37ACFBFE1BBD7DEF005CFB07 /* ToggleButton.swift in Sources */,
@@ -291,6 +295,7 @@
 				37ACFBD81BBC18E1005CFB07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

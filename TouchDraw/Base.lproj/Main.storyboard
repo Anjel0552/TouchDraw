@@ -83,7 +83,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-4e-4Ta">
-                                                    <rect key="frame" x="54" y="73" width="92" height="53"/>
+                                                    <rect key="frame" x="59" y="117" width="92" height="37"/>
                                                     <color key="backgroundColor" red="1" green="0.66895944554325193" blue="0.98944339061460129" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="26"/>
                                                     <state key="normal" title="UNDO"/>
@@ -106,7 +106,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMg-Zh-jGs">
-                                                    <rect key="frame" x="171" y="73" width="92" height="53"/>
+                                                    <rect key="frame" x="159" y="118" width="92" height="36"/>
                                                     <color key="backgroundColor" red="0.97541348706067255" green="1" blue="0.067719634721071342" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="26"/>
                                                     <state key="normal" title="CLEAR"/>
@@ -114,6 +114,27 @@
                                                         <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ru-77-ht9"/>
                                                     </connections>
                                                 </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-9Y-Vdg" customClass="TouchSlider" customModule="TouchDraw" customModuleProvider="target">
+                                                    <rect key="frame" x="40" y="73" width="240" height="37"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                                            <color key="value" red="0.52780506810000005" green="1" blue="0.35565461240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                                            <color key="value" red="1" green="0.0013860020520906069" blue="0.92185589935325374" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <blurEffect style="light"/>
@@ -159,6 +180,7 @@
                     <connections>
                         <outlet property="controlPanelTop" destination="dby-3Y-Z02" id="qHr-WC-qcx"/>
                         <outlet property="controlPanelView" destination="WHP-yk-adX" id="KSY-7f-lPu"/>
+                        <outlet property="toggleButton" destination="G4G-6M-gvY" id="VhC-3b-8Ys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
