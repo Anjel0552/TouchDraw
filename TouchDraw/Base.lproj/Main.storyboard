@@ -68,20 +68,6 @@
                                                         <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpb-Ss-ROg"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdz-ew-dr5">
-                                                    <rect key="frame" x="8" y="8" width="65" height="57"/>
-                                                    <color key="backgroundColor" red="0.28646515010000001" green="0.93826922469999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dn8-sr-ohp"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVV-t9-xlZ">
-                                                    <rect key="frame" x="86" y="8" width="65" height="57"/>
-                                                    <color key="backgroundColor" red="0.33900178202596121" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N3T-GS-yHY"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-4e-4Ta">
                                                     <rect key="frame" x="59" y="117" width="92" height="37"/>
                                                     <color key="backgroundColor" red="1" green="0.66895944554325193" blue="0.98944339061460129" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,20 +75,6 @@
                                                     <state key="normal" title="UNDO"/>
                                                     <connections>
                                                         <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ab-A3-v9G"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-to-wrd">
-                                                    <rect key="frame" x="247" y="8" width="65" height="57"/>
-                                                    <color key="backgroundColor" red="1" green="0.17585450537892799" blue="0.18453229037125685" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZt-Al-VxB"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN1-qY-9KE">
-                                                    <rect key="frame" x="165" y="8" width="65" height="57"/>
-                                                    <color key="backgroundColor" red="1" green="0.52810612810000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <action selector="chooseColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQs-NI-Rf6"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMg-Zh-jGs">
@@ -135,6 +107,28 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-d5-8Mh">
+                                                    <rect key="frame" x="16" y="8" width="287" height="57"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cl7-og-Yxq">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorCell" id="jSg-dO-BDj">
+                                                            <rect key="frame" x="0.0" y="9" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <size key="customSize" width="40" height="40"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
                                         </view>
                                         <blurEffect style="light"/>
@@ -178,6 +172,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="colorPallete" destination="iW5-d5-8Mh" id="Tnf-9U-Qdl"/>
                         <outlet property="controlPanelTop" destination="dby-3Y-Z02" id="qHr-WC-qcx"/>
                         <outlet property="controlPanelView" destination="WHP-yk-adX" id="KSY-7f-lPu"/>
                         <outlet property="toggleButton" destination="G4G-6M-gvY" id="VhC-3b-8Ys"/>
