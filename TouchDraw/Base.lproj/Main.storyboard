@@ -26,40 +26,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU5-Yh-nmA">
-                                                    <rect key="frame" x="16" y="154" width="39" height="38"/>
-                                                    <state key="normal" title="L" image="line.png"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU5-Yh-nmA">
+                                                    <rect key="frame" x="8" y="157" width="43" height="43"/>
+                                                    <state key="normal" title="L" image="line1.png"/>
                                                     <connections>
                                                         <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6EC-ya-BpP"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-1X-EYW">
-                                                    <rect key="frame" x="52" y="154" width="48" height="46"/>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-1X-EYW">
+                                                    <rect key="frame" x="59" y="159" width="43" height="41"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <state key="normal" title="S" image="scribble.png"/>
+                                                    <state key="normal" title="S" image="scribble1.png"/>
                                                     <connections>
                                                         <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CfP-BR-ueJ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-B2-6QJ">
-                                                    <rect key="frame" x="171" y="162" width="30" height="30"/>
-                                                    <state key="normal" title="R"/>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-B2-6QJ">
+                                                    <rect key="frame" x="167" y="158" width="41" height="41"/>
+                                                    <state key="normal" title="R" image="square1.png"/>
                                                     <connections>
                                                         <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qn-dG-HVo"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAK-wz-yce">
-                                                    <rect key="frame" x="222" y="162" width="30" height="30"/>
-                                                    <state key="normal" title="T"/>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAK-wz-yce">
+                                                    <rect key="frame" x="224" y="157" width="41" height="41"/>
+                                                    <state key="normal" title="T" image="triangle1.png"/>
                                                     <connections>
                                                         <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RD1-5h-lWZ"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-J7-uY1">
-                                                    <rect key="frame" x="273" y="162" width="30" height="30"/>
-                                                    <state key="normal" title="D"/>
-                                                    <connections>
-                                                        <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpb-Ss-ROg"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-4e-4Ta">
@@ -80,7 +73,7 @@
                                                         <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ru-77-ht9"/>
                                                     </connections>
                                                 </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-9Y-Vdg" customClass="TouchSlider" customModule="TouchDraw" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-9Y-Vdg" customClass="TouchSlider" customModule="TouchDraw" customModuleProvider="target">
                                                     <rect key="frame" x="40" y="73" width="240" height="37"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
@@ -101,7 +94,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-d5-8Mh">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-d5-8Mh">
                                                     <rect key="frame" x="16" y="8" width="287" height="57"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cl7-og-Yxq">
@@ -124,24 +117,63 @@
                                                     </cells>
                                                 </collectionView>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YE-yP-koJ">
-                                                    <rect key="frame" x="108" y="156" width="42" height="42"/>
-                                                    <state key="normal" title="C" image="circe.png"/>
+                                                    <rect key="frame" x="110" y="159" width="41" height="41"/>
+                                                    <state key="normal" title="C" image="circle1.png"/>
                                                     <connections>
                                                         <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSn-qd-9Aj"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-J7-uY1">
+                                                    <rect key="frame" x="272" y="158" width="40" height="41"/>
+                                                    <state key="normal" title="D" image="diamond1.png"/>
+                                                    <connections>
+                                                        <action selector="chooseTool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpb-Ss-ROg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fbO-1X-EYW" firstAttribute="leading" secondItem="aU5-Yh-nmA" secondAttribute="trailing" constant="8" id="5Tz-mG-pBM"/>
+                                                <constraint firstAttribute="bottom" secondItem="aU5-Yh-nmA" secondAttribute="bottom" id="ARv-JQ-L87"/>
+                                                <constraint firstItem="iW5-d5-8Mh" firstAttribute="top" secondItem="ghr-Tn-wxV" secondAttribute="top" id="ArG-cd-u6O"/>
+                                                <constraint firstItem="iW5-d5-8Mh" firstAttribute="leading" secondItem="ghr-Tn-wxV" secondAttribute="leading" constant="15" id="GdW-EE-gOn"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dwa-9Y-Vdg" secondAttribute="trailing" constant="40" id="JVV-Aj-vun"/>
+                                                <constraint firstItem="aU5-Yh-nmA" firstAttribute="leading" secondItem="ghr-Tn-wxV" secondAttribute="leading" constant="8" id="Rby-BY-pUG"/>
+                                                <constraint firstItem="iW5-d5-8Mh" firstAttribute="leading" secondItem="ghr-Tn-wxV" secondAttribute="leading" constant="16" id="Yjq-i3-NFN"/>
+                                                <constraint firstItem="Dwa-9Y-Vdg" firstAttribute="leading" secondItem="ghr-Tn-wxV" secondAttribute="leading" constant="40" id="eKy-GW-X5q"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dwa-9Y-Vdg" secondAttribute="trailing" constant="40" id="gig-NH-gnB"/>
+                                                <constraint firstItem="Dwa-9Y-Vdg" firstAttribute="top" secondItem="iW5-d5-8Mh" secondAttribute="bottom" id="lVR-rT-3SE"/>
+                                                <constraint firstItem="iW5-d5-8Mh" firstAttribute="top" secondItem="ghr-Tn-wxV" secondAttribute="top" id="mXq-Cx-EEM"/>
+                                                <constraint firstAttribute="trailing" secondItem="iW5-d5-8Mh" secondAttribute="trailing" constant="15" id="mmy-wk-l7a"/>
+                                                <constraint firstItem="Dwa-9Y-Vdg" firstAttribute="top" secondItem="iW5-d5-8Mh" secondAttribute="bottom" id="qDD-n2-Iog"/>
+                                                <constraint firstAttribute="trailing" secondItem="iW5-d5-8Mh" secondAttribute="trailing" constant="16" id="wcM-3x-32d"/>
+                                                <constraint firstItem="Dwa-9Y-Vdg" firstAttribute="leading" secondItem="ghr-Tn-wxV" secondAttribute="leading" constant="40" id="zBl-8e-jwR"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="ArG-cd-u6O"/>
+                                                    <exclude reference="GdW-EE-gOn"/>
+                                                    <exclude reference="Yjq-i3-NFN"/>
+                                                    <exclude reference="mXq-Cx-EEM"/>
+                                                    <exclude reference="mmy-wk-l7a"/>
+                                                    <exclude reference="wcM-3x-32d"/>
+                                                    <exclude reference="lVR-rT-3SE"/>
+                                                </mask>
+                                            </variation>
                                         </view>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="o8o-R7-vFy" firstAttribute="leading" secondItem="WHP-yk-adX" secondAttribute="leading" id="9TN-aH-MdM"/>
                                     <constraint firstAttribute="trailing" secondItem="o8o-R7-vFy" secondAttribute="trailing" id="Eeq-h8-AaC"/>
+                                    <constraint firstItem="o8o-R7-vFy" firstAttribute="top" secondItem="WHP-yk-adX" secondAttribute="top" id="JUQ-Uw-Dgk"/>
                                     <constraint firstAttribute="height" constant="200" id="NXG-6F-Lz0"/>
+                                    <constraint firstAttribute="bottom" secondItem="o8o-R7-vFy" secondAttribute="bottom" id="cki-XO-GUz"/>
                                     <constraint firstItem="o8o-R7-vFy" firstAttribute="leading" secondItem="WHP-yk-adX" secondAttribute="leading" id="iFZ-hk-57I"/>
                                     <constraint firstItem="o8o-R7-vFy" firstAttribute="top" secondItem="WHP-yk-adX" secondAttribute="top" id="kXb-qM-aVa"/>
                                     <constraint firstAttribute="bottom" secondItem="o8o-R7-vFy" secondAttribute="bottom" id="rOo-ew-Qj4"/>
+                                    <constraint firstAttribute="trailing" secondItem="o8o-R7-vFy" secondAttribute="trailing" id="sjH-KV-SWV"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-6M-gvY" customClass="ToggleButton" customModule="TouchDraw" customModuleProvider="target">
@@ -185,8 +217,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circe.png" width="57" height="55"/>
-        <image name="line.png" width="84" height="84"/>
-        <image name="scribble.png" width="59" height="60"/>
+        <image name="circle1.png" width="84" height="84"/>
+        <image name="diamond1.png" width="84" height="84"/>
+        <image name="line1.png" width="84" height="84"/>
+        <image name="scribble1.png" width="84" height="84"/>
+        <image name="square1.png" width="84" height="84"/>
+        <image name="triangle1.png" width="83" height="84"/>
     </resources>
 </document>
